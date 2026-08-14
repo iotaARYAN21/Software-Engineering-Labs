@@ -9,3 +9,15 @@
 /home/iotaaryan/Documents/Software Engineering/lab2/Persistance/obj/Debug/net10.0/refint/Persistance.dll
 /home/iotaaryan/Documents/Software Engineering/lab2/Persistance/obj/Debug/net10.0/Persistance.pdb
 /home/iotaaryan/Documents/Software Engineering/lab2/Persistance/obj/Debug/net10.0/ref/Persistance.dll
+/home/iotaaryan/Documents/Software Engineering/weekly-labs/lab2/Persistance/bin/Debug/net10.0/Persistance.deps.json
+/home/iotaaryan/Documents/Software Engineering/weekly-labs/lab2/Persistance/bin/Debug/net10.0/Persistance.dll
+/home/iotaaryan/Documents/Software Engineering/weekly-labs/lab2/Persistance/bin/Debug/net10.0/Persistance.pdb
+/home/iotaaryan/Documents/Software Engineering/weekly-labs/lab2/Persistance/obj/Debug/net10.0/Persistance.GeneratedMSBuildEditorConfig.editorconfig
+/home/iotaaryan/Documents/Software Engineering/weekly-labs/lab2/Persistance/obj/Debug/net10.0/Persistance.AssemblyInfoInputs.cache
+/home/iotaaryan/Documents/Software Engineering/weekly-labs/lab2/Persistance/obj/Debug/net10.0/Persistance.AssemblyInfo.cs
+/home/iotaaryan/Documents/Software Engineering/weekly-labs/lab2/Persistance/obj/Debug/net10.0/Persistance.csproj.CoreCompileInputs.cache
+/home/iotaaryan/Documents/Software Engineering/weekly-labs/lab2/Persistance/obj/Debug/net10.0/Persistance.sourcelink.json
+/home/iotaaryan/Documents/Software Engineering/weekly-labs/lab2/Persistance/obj/Debug/net10.0/Persistance.dll
+/home/iotaaryan/Documents/Software Engineering/weekly-labs/lab2/Persistance/obj/Debug/net10.0/refint/Persistance.dll
+/home/iotaaryan/Documents/Software Engineering/weekly-labs/lab2/Persistance/obj/Debug/net10.0/Persistance.pdb
+/home/iotaaryan/Documents/Software Engineering/weekly-labs/lab2/Persistance/obj/Debug/net10.0/ref/Persistance.dll

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/iotaaryan/Documents/Software Engineering/lab2/Persistance/Persistance.csproj",
+      "projectUniqueName": "/home/iotaaryan/Documents/Software Engineering/weekly-labs/lab2/Persistance/Persistance.csproj",
       "projectName": "Persistance",
-      "projectPath": "/home/iotaaryan/Documents/Software Engineering/lab2/Persistance/Persistance.csproj",
+      "projectPath": "/home/iotaaryan/Documents/Software Engineering/weekly-labs/lab2/Persistance/Persistance.csproj",
       "packagesPath": "/home/iotaaryan/.nuget/packages/",
-      "outputPath": "/home/iotaaryan/Documents/Software Engineering/lab2/Persistance/obj/",
+      "outputPath": "/home/iotaaryan/Documents/Software Engineering/weekly-labs/lab2/Persistance/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/iotaaryan/.nuget/NuGet/NuGet.Config"

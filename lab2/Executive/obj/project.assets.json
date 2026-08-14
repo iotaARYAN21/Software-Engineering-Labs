@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/iotaaryan/Documents/Software Engineering/lab2/Executive/Executive.csproj",
+      "projectUniqueName": "/home/iotaaryan/Documents/Software Engineering/weekly-labs/lab2/Executive/Executive.csproj",
       "projectName": "Executive",
-      "projectPath": "/home/iotaaryan/Documents/Software Engineering/lab2/Executive/Executive.csproj",
+      "projectPath": "/home/iotaaryan/Documents/Software Engineering/weekly-labs/lab2/Executive/Executive.csproj",
       "packagesPath": "/home/iotaaryan/.nuget/packages/",
-      "outputPath": "/home/iotaaryan/Documents/Software Engineering/lab2/Executive/obj/",
+      "outputPath": "/home/iotaaryan/Documents/Software Engineering/weekly-labs/lab2/Executive/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/iotaaryan/.nuget/NuGet/NuGet.Config"
@@ -52,8 +52,8 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "/home/iotaaryan/Documents/Software Engineering/lab2/Persistance/Persistance.csproj": {
-              "projectPath": "/home/iotaaryan/Documents/Software Engineering/lab2/Persistance/Persistance.csproj"
+            "/home/iotaaryan/Documents/Software Engineering/weekly-labs/lab2/Persistance/Persistance.csproj": {
+              "projectPath": "/home/iotaaryan/Documents/Software Engineering/weekly-labs/lab2/Persistance/Persistance.csproj"
             }
           }
         }
