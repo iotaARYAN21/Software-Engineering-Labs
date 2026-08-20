@@ -1,0 +1,12 @@
+/home/iotaaryan/Documents/Software Engineering/weekly-labs/lab3/ProtocolManager/bin/Debug/net10.0/ProtocolManager.deps.json
+/home/iotaaryan/Documents/Software Engineering/weekly-labs/lab3/ProtocolManager/bin/Debug/net10.0/ProtocolManager.dll
+/home/iotaaryan/Documents/Software Engineering/weekly-labs/lab3/ProtocolManager/bin/Debug/net10.0/ProtocolManager.pdb
+/home/iotaaryan/Documents/Software Engineering/weekly-labs/lab3/ProtocolManager/obj/Debug/net10.0/ProtocolManager.GeneratedMSBuildEditorConfig.editorconfig
+/home/iotaaryan/Documents/Software Engineering/weekly-labs/lab3/ProtocolManager/obj/Debug/net10.0/ProtocolManager.AssemblyInfoInputs.cache
+/home/iotaaryan/Documents/Software Engineering/weekly-labs/lab3/ProtocolManager/obj/Debug/net10.0/ProtocolManager.AssemblyInfo.cs
+/home/iotaaryan/Documents/Software Engineering/weekly-labs/lab3/ProtocolManager/obj/Debug/net10.0/ProtocolManager.csproj.CoreCompileInputs.cache
+/home/iotaaryan/Documents/Software Engineering/weekly-labs/lab3/ProtocolManager/obj/Debug/net10.0/ProtocolManager.sourcelink.json
+/home/iotaaryan/Documents/Software Engineering/weekly-labs/lab3/ProtocolManager/obj/Debug/net10.0/ProtocolManager.dll
+/home/iotaaryan/Documents/Software Engineering/weekly-labs/lab3/ProtocolManager/obj/Debug/net10.0/refint/ProtocolManager.dll
+/home/iotaaryan/Documents/Software Engineering/weekly-labs/lab3/ProtocolManager/obj/Debug/net10.0/ProtocolManager.pdb
+/home/iotaaryan/Documents/Software Engineering/weekly-labs/lab3/ProtocolManager/obj/Debug/net10.0/ref/ProtocolManager.dll

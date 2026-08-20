@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Networking/Networking.csproj" />
+  <Project Path="ProtocolManager/ProtocolManager.csproj" />
+</Solution>
