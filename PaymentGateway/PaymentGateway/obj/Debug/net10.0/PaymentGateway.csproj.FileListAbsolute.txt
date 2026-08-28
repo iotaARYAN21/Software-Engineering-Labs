@@ -2,3 +2,8 @@ E:\Software Eng\PaymentGateway\PaymentGateway\obj\Debug\net10.0\PaymentGateway.G
 E:\Software Eng\PaymentGateway\PaymentGateway\obj\Debug\net10.0\PaymentGateway.AssemblyInfoInputs.cache
 E:\Software Eng\PaymentGateway\PaymentGateway\obj\Debug\net10.0\PaymentGateway.AssemblyInfo.cs
 E:\Software Eng\PaymentGateway\PaymentGateway\obj\Debug\net10.0\PaymentGateway.csproj.CoreCompileInputs.cache
+E:\Software Eng\Software-Engineering-Labs\PaymentGateway\PaymentGateway\obj\Debug\net10.0\PaymentGateway.GeneratedMSBuildEditorConfig.editorconfig
+E:\Software Eng\Software-Engineering-Labs\PaymentGateway\PaymentGateway\obj\Debug\net10.0\PaymentGateway.AssemblyInfoInputs.cache
+E:\Software Eng\Software-Engineering-Labs\PaymentGateway\PaymentGateway\obj\Debug\net10.0\PaymentGateway.AssemblyInfo.cs
+E:\Software Eng\Software-Engineering-Labs\PaymentGateway\PaymentGateway\obj\Debug\net10.0\PaymentGateway.csproj.CoreCompileInputs.cache
+E:\Software Eng\Software-Engineering-Labs\PaymentGateway\PaymentGateway\obj\Debug\net10.0\PaymentGateway.sourcelink.json
