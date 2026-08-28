@@ -2,13 +2,16 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for more information.
 using System;
+using System.Transactions;
 namespace PaymentGateway
 {
-    public class PayTm : PaymentGatewayInterface
+    public class PayTm
     {
-        public void Pay(int id, double amt)
+        public string SendMoney(double amt)
         {
-            Console.WriteLine($"Sent {amt} from {id}\n");
+            Console.WriteLine($"PayTm processing {amt}");
+
+            return "PAYTM123";
         }
     }
 };

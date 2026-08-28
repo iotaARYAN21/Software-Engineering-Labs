@@ -8,16 +8,24 @@ using System.Text;
 
 namespace PaymentGateway
 {
-    internal class GPayAdapter : PaymentGatewayInterface
+    public sealed class GPayAdapter : IPaymentGateway
     {
-        GPay _gpay;
-        GPayAdapter()
+        private readonly GPay _gpay;
+        public GPayAdapter()
         {
             _gpay = new GPay();
         }
-        public void Pay(int id, double amount)
+        public PaymentResult Pay(double amount)
         {
-            _gpay.MakePayment(id, amount);
+            try
+            {
+                string reference = _gpay.MakePayment(amount);
+                return new PaymentResult(true, reference);
+            }
+            catch
+            {
+                return new PaymentResult(false, "");
+            }
         }
     }
 }

@@ -10,8 +10,15 @@ using System.Threading.Tasks;
 
 namespace PaymentGateway
 {
-    public sealed record PaymentResult(
-            bool Succeeded,
-            string Reference
-    );
+    public sealed class PaymentResult
+    {
+        public bool Succeeded { get; }
+        public string Reference { get; }
+
+        public PaymentResult(bool succeeded, string reference)
+        {
+            Succeeded = succeeded;
+            Reference = reference;
+        }
+    }
 }

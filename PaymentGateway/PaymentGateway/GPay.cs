@@ -8,11 +8,12 @@ using System.Text;
 
 namespace PaymentGateway
 {
-    internal class GPay
+    public class GPay
     {
-        public void MakePayment(int id, double amount)
+        public string MakePayment(double amount)
         {
-            Console.WriteLine($"Sent {amount} from {id}\n");
+            Console.WriteLine($"GPay processing {amount}");
+            return "GPAY123";
         }
     }
 }
