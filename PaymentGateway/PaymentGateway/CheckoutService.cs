@@ -2,14 +2,16 @@
 {
     public class CheckoutService
     {
-        PaymentGatewayInterface _paymentGatewayInterface;
-        CheckoutService(PaymentGatewayInterface paymentGatewayInterface)
+        private readonly IPaymentGateway _paymentGateway;
+
+        public CheckoutService(IPaymentGateway paymentGateway)
         {
-            this._paymentGatewayInterface = paymentGatewayInterface;
+            _paymentGateway = paymentGateway;
         }
-        public void Checkout(int id, int amount)
+
+        public PaymentResult Checkout(double amount)
         {
-            _paymentGatewayInterface.Pay(id, amount);
+            return _paymentGateway.Pay(amount);
         }
     }
 }
