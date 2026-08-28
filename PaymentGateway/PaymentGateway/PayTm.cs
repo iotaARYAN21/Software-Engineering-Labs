@@ -7,8 +7,12 @@ namespace PaymentGateway
 {
     public class PayTm
     {
-        public string SendMoney(double amt)
+        public string SendMoney(decimal amt)
         {
+            if (amt < 0)
+            {
+                throw new ArgumentException("Amount cannot be negative.");
+            }
             Console.WriteLine($"PayTm processing {amt}");
 
             return "PAYTM123";

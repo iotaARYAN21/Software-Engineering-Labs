@@ -15,14 +15,14 @@ namespace PaymentGateway
         {
             _gpay = new GPay();
         }
-        public PaymentResult Pay(double amount)
+        public PaymentResult Pay(decimal amount)
         {
             try
             {
                 string reference = _gpay.MakePayment(amount);
                 return new PaymentResult(true, reference);
             }
-            catch
+            catch(ArgumentException)
             {
                 return new PaymentResult(false, "");
             }

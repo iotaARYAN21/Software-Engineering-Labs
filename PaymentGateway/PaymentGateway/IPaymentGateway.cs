@@ -6,6 +6,6 @@ namespace PaymentGateway
 {
     public interface IPaymentGateway
     {
-        PaymentResult Pay(double amount);
+        PaymentResult Pay(decimal amount);
     }
 }

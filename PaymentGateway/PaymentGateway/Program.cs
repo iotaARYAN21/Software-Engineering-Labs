@@ -14,7 +14,6 @@ namespace PaymentGateway
     {
         public static void Main()
         {
-            GPay gpay = new GPay();
 
             IPaymentGateway gpayAdapter =
                 new GPayAdapter();
