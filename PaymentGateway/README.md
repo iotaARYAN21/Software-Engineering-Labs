@@ -19,7 +19,7 @@ The **Adapter Pattern** is used to make both incompatible APIs compatible with a
 ## Design Overview
 
 ### UML Diagram
-![alt text](UML_Assignment1.jpeg)
+![alt text](finalUML.jpeg)
 
 The **Adapter Pattern** is used to allow the incompatible `GPay` and `PayTm` classes to be used through a common interface.The checkout layer depends only on `IPaymentGateway`. The adapters implement this interface and internally translate the common `Pay()` call into the appropriate method of the payment gateway.
 
