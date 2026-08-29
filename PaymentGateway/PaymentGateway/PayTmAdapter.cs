@@ -20,11 +20,12 @@ namespace PaymentGateway
         public PaymentResult Pay(decimal amt)
         {
             try
-            {  
+            {
                 string reference = _paytm.SendMoney(amt);
                 return new PaymentResult(true, reference);
             }
-            catch(ArgumentException)
+            catch
+            (ArgumentException)
             {
                 return new PaymentResult(false, "");
             }

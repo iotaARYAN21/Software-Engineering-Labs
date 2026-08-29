@@ -22,7 +22,8 @@ namespace PaymentGateway
                 string reference = _gpay.MakePayment(amount);
                 return new PaymentResult(true, reference);
             }
-            catch(ArgumentException)
+            catch
+            (ArgumentException)
             {
                 return new PaymentResult(false, "");
             }

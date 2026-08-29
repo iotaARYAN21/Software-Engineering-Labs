@@ -12,9 +12,9 @@ namespace PaymentGateway
     {
         public string MakePayment(decimal amount)
         {
-            if (amount < 0)
+            if (amount <= 0)
             {
-                throw new ArgumentException("Amount cannot be negative.");
+                throw new ArgumentException("Amount cannot be non positive.");
             }
             Console.WriteLine($"GPay processing {amount}");
             return "GPAY123";

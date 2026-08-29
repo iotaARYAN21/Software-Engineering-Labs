@@ -9,7 +9,7 @@
             _paymentGateway = paymentGateway;
         }
 
-        public PaymentResult Checkout(double amount)
+        public PaymentResult Checkout(decimal amount)
         {
             return _paymentGateway.Pay(amount);
         }

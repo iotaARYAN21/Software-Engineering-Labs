@@ -2,5 +2,6 @@
   <Folder Name="/Solution Items/">
     <File Path=".editorconfig" />
   </Folder>
+  <Project Path="PaymentGateway.Tests/PaymentGateway.Tests.csproj" Id="882620fe-4d2a-4db4-9a37-08926e4240f9" />
   <Project Path="PaymentGateway/PaymentGateway.csproj" />
 </Solution>

@@ -9,9 +9,9 @@ namespace PaymentGateway
     {
         public string SendMoney(decimal amt)
         {
-            if (amt < 0)
+            if (amt <= 0)
             {
-                throw new ArgumentException("Amount cannot be negative.");
+                throw new ArgumentException("Amount cannot be non positive.");
             }
             Console.WriteLine($"PayTm processing {amt}");
 
