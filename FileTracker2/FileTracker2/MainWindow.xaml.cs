@@ -29,10 +29,10 @@ namespace FileTracker2
         {
             InitializeComponent();
 
-            // Start watching the folder
+            
             FileWatching();
 
-            // Load the initial content of the file
+            
             string filePath = path + "FileWatcherTester.txt";
 
             if (File.Exists(filePath))
@@ -44,22 +44,20 @@ namespace FileTracker2
 
         private void FileWatching()
         {
-            // Create FileSystemWatcher
             watcher = new FileSystemWatcher(path);
 
-            // Watch only this file
-            watcher.Filter = "FileWatcherTester.txt";
+                     watcher.Filter = "FileWatcherTester.txt";
 
-            // Detect changes to the file
+           
             watcher.NotifyFilter =
                 NotifyFilters.LastWrite |
                 NotifyFilters.Size |
                 NotifyFilters.FileName;
 
-            // Subscribe to Changed event
+            
             watcher.Changed += UpdateBox;
 
-            // Start watching
+           
             watcher.EnableRaisingEvents = true;
         }
 
