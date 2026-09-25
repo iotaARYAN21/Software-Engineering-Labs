@@ -65,10 +65,10 @@ namespace FileTracker2
         {
             try
             {
-                // Read the updated file
+                
                 content = File.ReadAllText(e.FullPath);
 
-                // Update WPF UI from the UI thread
+               
                 Dispatcher.Invoke(() =>
                 {
                     textBox.Text = content;
