@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ScreenCapture;
+using System;
 using System.Drawing; // Requires System.Drawing or System.Drawing.Common
 using System.Drawing.Imaging;
 using System.IO;
@@ -12,6 +13,128 @@ namespace ScreenCaptureWPF
 {
     public partial class MainWindow : Window
     {
+        // IMAGE DIFFING PART STARTS
+        private const int TILE_SIZE = 64;
+        private Dictionary<(int X, int Y), ulong> _previousTileHashes = new Dictionary<(int X, int Y), ulong>();
+
+        private ulong CalculateTileHash(Bitmap bitmap,int startX,int startY,int width,int height)
+        {
+            ulong hash = 14695981039346656037UL;
+
+            for (int y = startY; y < startY + height; y++)
+            {
+                for (int x = startX; x < startX + width; x++)
+                {
+                    System.Drawing.Color pixel = bitmap.GetPixel(x, y);
+
+                    hash ^= pixel.R;
+                    hash *= 1099511628211UL;
+
+                    hash ^= pixel.G;
+                    hash *= 1099511628211UL;
+
+                    hash ^= pixel.B;
+                    hash *= 1099511628211UL;
+                }
+            }
+
+            return hash;
+        }
+
+        private List<Tile> FindChangedTiles(Bitmap currentFrame)
+        {
+            List<Tile> changedTiles = new List<Tile>();
+
+            int screenWidth = currentFrame.Width;
+            int screenHeight = currentFrame.Height;
+
+            for (int y = 0; y < screenHeight; y += TILE_SIZE)
+            {
+                for (int x = 0; x < screenWidth; x += TILE_SIZE)
+                {
+                    int tileWidth = Math.Min(
+                        TILE_SIZE,
+                        screenWidth - x
+                    );
+
+                    int tileHeight = Math.Min(
+                        TILE_SIZE,
+                        screenHeight - y
+                    );
+
+                    ulong currentHash = CalculateTileHash(
+                        currentFrame,
+                        x,
+                        y,
+                        tileWidth,
+                        tileHeight
+                    );
+            
+                    var tilePosition = (x, y);
+
+                    bool changed = true;
+
+                    if (_previousTileHashes.TryGetValue(
+                            tilePosition,
+                            out ulong previousHash))
+                    {
+                        if (previousHash != currentHash)
+                        {
+                            Console.WriteLine(
+                                $"Changed tile ({x}, {y}) | " +
+                                $"Old: {previousHash:X16} | " +
+                                $"New: {currentHash:X16}"
+                            );
+                        }
+                        changed = previousHash != currentHash;
+                    }
+
+                    if (changed)
+                    {
+                        Tile tile = new Tile
+                        {
+                            X = x,
+                            Y = y,
+                            Width = tileWidth,
+                            Height = tileHeight,
+                            Hash = currentHash,
+                            Data = ExtractTileData(currentFrame,x,y,tileWidth,tileHeight)
+                        };
+
+                        changedTiles.Add(tile);
+                    }
+
+                    _previousTileHashes[tilePosition] = currentHash;
+                }
+            }
+
+            return changedTiles;
+        }
+
+        private byte[] ExtractTileData(Bitmap bitmap,int startX,int startY,int width,int height)
+        {
+            using (Bitmap tileBitmap =
+                bitmap.Clone(
+                    new Rectangle(
+                        startX,
+                        startY,
+                        width,
+                        height
+                    ),
+                    bitmap.PixelFormat))
+            {
+                using (MemoryStream stream = new MemoryStream())
+                {
+                    tileBitmap.Save(
+                        stream,
+                        ImageFormat.Png
+                    );
+
+                    return stream.ToArray();
+                }
+            }
+        }
+        // IMAAGE DIFFING ENDS
         private DispatcherTimer _captureTimer;
         private int _numberOfCaptures = 0;
 
@@ -38,7 +161,7 @@ namespace ScreenCaptureWPF
                 PerformScreenCapture();
                 _captureTimer.Start();
 
-                StatusTextBlock.Text = $"Capturing screen every {timeStep} seconds...";
+                //StatusTextBlock.Text = $"Capturing screen every {timeStep} seconds...";
             }
             else
             {
@@ -84,6 +207,16 @@ namespace ScreenCaptureWPF
                         // Copy pixels from screen to the bitmap
                         captureGraphics.CopyFromScreen(bounds.Location, System.Drawing.Point.Empty, bounds.Size);
                     }
+
+                    // Image diffing -> before saving the image as png or jpeg compression we are using the bitmap for diffing
+                    List<Tile> changedTiles =FindChangedTiles(captureBitmap);
+
+                    Console.WriteLine($"Changed tiles: {changedTiles.Count}");
+
+                    StatusTextBlock.Text = $"count of changedTiles {changedTiles.Count}";
+                    // image diffing ends
+
+                    CaptureImage.Source =ConvertBitmapToImageSource(captureBitmap);
 
                     // Save the image to the hard drive
                     captureBitmap.Save(fullPath, ImageFormat.Jpeg);
